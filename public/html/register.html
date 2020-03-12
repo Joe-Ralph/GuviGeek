@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../sass/style.css">
+</head>
+
+<body>
+    <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Validation Message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-value">
+              Passwords doesn't match. Please change!!!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="container">
+        <div class="jumbotron align-items-center">
+            <h1 class="display-4 text-center">Register Here!</h1>
+            <hr class="my-4">
+            <form>
+                <div class="form-group">
+                    <label for="registerUsername">User Name</label>
+                    <input type="text" class="form-control" id="registerUsername" aria-describedby="emailHelp"
+                        placeholder="Enter Username">
+
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email address</label>
+                    <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp"
+                        placeholder="Enter Email">
+
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="registerConfirmPassword"
+                        placeholder="Confirm Password">
+                </div>
+                <button class="btn btn-primary" id="registerSubmit">Submit</button>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-md-12  text-justify">
+                        <small class="text-muted align-middle text-center">To Signin <a href="../index.html"
+                                class="btn-link">Click here!</a>
+                        </small>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

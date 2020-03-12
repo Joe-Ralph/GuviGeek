@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../sass/style.css">
+</head>
+
+<body>
+    <div class="modal fade" id="profileAdder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ProfileTitle">Add Your Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp"
+                                placeholder="Enter First Name">
+        
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp"
+                                placeholder="Enter Last Name">
+        
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date Of Birth</label>
+                            <input type="date" class="form-control" id="dob" aria-describedby="emailHelp"
+                                placeholder="click to select date">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Contact</label>
+                            <textarea class="form-control" id="contact" rows="3"></textarea>
+                          </div>
+                        <button type='submit' class="btn btn-primary">Submit</button>
+                        <hr class="my-4">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="jumbotron align-items-center">
+            <h2 class="display-4 text-center">Your Profile</h2>
+            <div class="row" id="content"></div>
+            <div class="col-md-12">
+                <button class="btn btn-success" id="editProfile">Edit</button>
+                <button class="btn btn-danger" id="logout">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>
