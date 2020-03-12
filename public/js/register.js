@@ -52,7 +52,7 @@ $('form').submit(function(event) {
         validateRegistration(name,email,password);
     }
     else{
-        $('#modal-value').text('Passwords doesn\'t match. Please change!!!');
+        $('#modal-value').text('Passwords doesn\'t match. Try Again!!!');
         $('#warning').modal('show');
     }
 })
