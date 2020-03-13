@@ -22,13 +22,12 @@ function validateRegistration(name,email,password){
         $('#warning').modal('show');
     }
     else{
+        const registerObject = {username:name,password:password,email:email};
         $.ajax({
             url:'../includes/register.php',
             method:'POST',
             data: {
-                username: name,
-                password: password,
-                email: email
+                registerJSON:JSON.stringify(registerObject)
             },
             success: function(data){
                 $('#modal-value').html(data);

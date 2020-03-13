@@ -3,8 +3,10 @@ require_once 'conauth.php';
 
 global $mysqli;
 $salt = 'GuviGeeks';
-$email = $_POST['email'];
-$password = $_POST['password'];
+$signinJSON = $_POST['signinJSON'];
+$signinAssocArray = json_decode($signinJSON,true);
+$email = $signinAssocArray['email'];
+$password = $signinAssocArray['password'];
 $verifyQuery = $mysqli->prepare('SELECT password From auth Where email = ?');
 
 $verifyQuery->bind_param('s', $email);

@@ -4,9 +4,13 @@ require_once 'conauth.php';
 
 global $mysqli;
 $salt = 'GuviGeeks';
-$username = $_POST['username'];
-$password = $_POST['password'];
-$email = $_POST['email'];
+
+$registerJSON = $_POST['registerJSON'];
+$registerAssocArray = json_decode($registerJSON,true);
+
+$username = $registerAssocArray['username'];
+$password = $registerAssocArray['password'];
+$email = $registerAssocArray['email'];
 $auth = 1;
 // echo $username, $password, $email;
 

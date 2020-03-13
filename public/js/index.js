@@ -23,12 +23,12 @@ $('form').submit(function (event) {
         $('#modal-value').text("Please enter a valid email and password");
         $('#warning').modal('show');
     } else {
+        const signinJSON = {email:email, password:password};
         $.ajax({
             url: 'includes/signin.php',
             method: 'POST',
             data: {
-                email: email,
-                password: password
+                signinJSON: JSON.stringify(signinJSON)
             },
             success: function (data) {
                 if (data === 'success') {
